@@ -1,0 +1,44 @@
+{
+  "name": "mbti-standalone-app",
+  "version": "0.1.0",
+  "main": "public/Main.js",
+  "homepage": "./",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-scripts": "2.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "preelectron-pack": "npm run build",
+    "electron-pack": "build --win --macos -c.extraMetadata.main=build/Main.js"
+  },
+  "build": {
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "electron": "^4.1.0",
+    "electron-builder": "^20.39.0",
+    "typescript": "^3.3.3333"
+  }
+}
